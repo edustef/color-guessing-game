@@ -32,7 +32,7 @@ header h2 {
 .rgbDisplayer {
     font-family: 'Fira Code', monospace;
     font-size: 3rem;
-    margin: 10px 0 10px 0;  
+    margin: 10px 0 10px 0; 
 }
 nav {
     display:flex;
