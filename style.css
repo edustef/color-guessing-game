@@ -9,21 +9,30 @@ header {
     align-items: center;
     background-color: rgb(20, 150, 200);
 }
-header * {
+
+header {
     color: rgb(35, 35, 55);
-    margin: 5px;
-    padding: 10px 0 10px 0;
+}
+
+header h2:first-child {
+    padding-top: 10px;
+}
+
+header h2:last-child {
+    padding-bottom: 10px;
 }
 
 header h2 {
     font-size: 1.4rem;
     letter-spacing:0.3rem;
+    margin: 0;
     font-weight: 300;
 }
 
 .rgbDisplayer {
     font-family: 'Fira Code', monospace;
     font-size: 3rem;
+    margin: 10px 0 10px 0;  
 }
 nav {
     display:flex;
@@ -147,6 +156,9 @@ li {
 
     header h2 {
         font-size: 1.2rem;
+    }
+    .container {
+        margin-top: 60px;
     }
 }
 
