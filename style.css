@@ -1,6 +1,7 @@
 body {
     font-family: 'Lato', sans-serif;
     margin: 0;
+    background-color: rgb(35, 35, 55);
 }
 header {
     display:flex;
@@ -9,40 +10,144 @@ header {
     background-color: rgb(20, 150, 200);
 }
 header * {
+    color: rgb(35, 35, 55);
     margin: 5px;
-}
-header h2:first-child {
-    padding-top: 15px;
-}
-header h2:last-child {
-    padding-bottom: 15px;
+    padding: 10px 0 10px 0;
 }
 
 header h2 {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     letter-spacing:0.3rem;
     font-weight: 300;
 }
 
 .rgbDisplayer {
     font-family: 'Fira Code', monospace;
-    font-size: 3.5rem;
+    font-size: 3rem;
 }
 nav {
-    background-color: rgb(241, 241, 255);
-}
-nav {
-    display: flex;
+    display:flex;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 25%); 
     justify-content: center;
+    background-color: rgb(200, 255, 255);
 }
 ul {
-    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 760px;
     list-style-type: none;
-    padding: 10px 0 10px 0 ;
     margin: 0;
-    display:flex;
-    justify-content: end;
+    padding: 0;
 }
+ul li {
+    height: 39px;
+}
+
 ul li:first-child {
-    flex-grow: auto;
+    flex-grow: 2;
+    justify-self: start;
 }
+ul li:last-child {
+    margin-left:3%;
+}
+
+a {
+    color:rgb(20, 150, 200);
+    text-decoration: none;
+    font-weight: 700;
+    padding: 10px 10px 10px 10px;
+}
+
+.showLinkBg {
+    background-color:rgb(35, 35, 55);
+    border-radius: 15px 15px 0 0;
+}
+
+li {
+    display:flex;
+    align-items: center;
+}
+.container {
+    margin-top: 10px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.firstRow, .secondRow {
+    max-width: 90%;
+    display:flex;
+}
+.secondRow {
+    display: none;
+}
+
+.colorContainer {
+    background-color: red;
+    width: 150px;
+    height: 150px;
+    margin: 25px;
+    border-radius: 20px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 25%);  
+}
+
+
+
+@media (max-width: 945px) {
+    .colorContainer {
+        width: 150px;
+        height: 150px;
+        margin: 20px;
+    }
+    ul {
+        width: 530px;
+    }
+    .container {
+        margin-top: 10px;
+    }
+}
+
+.hidden {
+    opacity: 0;
+    transition: opacity 1000ms;
+}
+
+.show {
+    opacity: 1;
+    transition: opacity 200ms;
+}
+
+@media (max-width: 650px) {
+    .rgbDisplayer {
+        font-size: 2.2rem;
+    }
+    .colorContainer {
+        width: 100px;
+        height: 100px;
+        margin: 15px;
+    }
+    ul {
+        width: 360px;
+    }
+    .container {
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 425px) {
+    .rgbDisplayer {
+        font-size: 1.5rem;
+    }
+    .colorContainer {
+        width: 90px;
+        height: 90px;
+        margin: 5px;
+    }
+
+    header h2 {
+        font-size: 1.2rem;
+    }
+}
+
+
