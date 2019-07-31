@@ -42,6 +42,7 @@ function newGame() {
         COLORCONTAINER[i].style.backgroundColor = `rgb(${RGB[0]}, ${RGB[1]}, ${RGB[2]})`;
         COLORCONTAINER[i].addEventListener("click", round);
         COLORCONTAINER[i].classList.remove("hidden");
+        COLORCONTAINER[i].classList.remove("wrong");
         COLORCONTAINER[i].classList.add("show");
     }
     winnerContainerRGB = (winnerContainer.style.backgroundColor).toUpperCase();
@@ -63,9 +64,15 @@ function round() {
         if ((this.style.backgroundColor).toUpperCase() == rgbDisplayer.textContent) {
             colorFound = true;
             for (let j = 0; j < containers; j++) {
+                if (COLORCONTAINER[j].classList.contains("hidden")) {
+                    COLORCONTAINER[j].classList.add("wrong");
+                }
+                else {
+                    COLORCONTAINER[j].style.backgroundColor = winnerContainer.style.backgroundColor;
+                }
                 COLORCONTAINER[j].classList.add("show");
                 COLORCONTAINER[j].classList.remove("hidden");
-                COLORCONTAINER[j].style.backgroundColor = winnerContainer.style.backgroundColor; 
+                
             }
             document.querySelector("header").style.backgroundColor = winnerContainer.style.backgroundColor;
         }
@@ -75,6 +82,9 @@ function round() {
             this.classList.remove("show");
             this.classList.add("hidden");
         }
+    }
+    else {
+        newGame();
     }
 }
 

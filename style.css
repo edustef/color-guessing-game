@@ -147,6 +147,31 @@ li {
   }
 }
 
+.wrong {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.wrong::before,
+.wrong::after {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 20px; /* cross thickness */
+  background-color: coral;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 25%);
+}
+
+.wrong::before {
+  transform: rotate(45deg);
+}
+
+.wrong::after {
+  transform: rotate(-45deg);
+}
+
 @media (max-width: 425px) {
   .rgbDisplayer {
     font-size: 1.5rem;
