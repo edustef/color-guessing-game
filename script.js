@@ -36,6 +36,7 @@ LINKS[2].addEventListener("click", function (){
 function newGame() {
     colorFound = false;
     winnerContainer = COLORCONTAINER[Math.floor(Math.random() * containers)];
+    document.querySelector("header").style.backgroundColor = "rgb(20, 150, 200)";
     for (let i = 0; i < containers; i++) {
         RGB = randomRGB();
         COLORCONTAINER[i].style.backgroundColor = `rgb(${RGB[0]}, ${RGB[1]}, ${RGB[2]})`;
@@ -66,6 +67,7 @@ function round() {
                 COLORCONTAINER[j].classList.remove("hidden");
                 COLORCONTAINER[j].style.backgroundColor = winnerContainer.style.backgroundColor; 
             }
+            document.querySelector("header").style.backgroundColor = winnerContainer.style.backgroundColor;
         }
         else {
             colorFound = false;
