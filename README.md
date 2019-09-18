@@ -1,4 +1,4 @@
 # color_guessing_game
 
 
-https://papalapte.github.io/color_guessing_game/
+https://goofy-swanson-5a373c.netlify.com/
