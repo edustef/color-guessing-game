@@ -8,14 +8,14 @@
     <link rel="stylesheet" href="css/main.css">
     <link href="https://fonts.googleapis.com/css?family=Fira+Code|Lato:400,700&display=swap" rel="stylesheet">
 
-    <title>Color Guessing Game</title>
+    <title>Juego de adivinar el color</title>
 </head>
 
 <body>
     <header>
-        <h2>THE AMAZING</h2>
+        <h2>EL INCREÍBLE JUEGO </h2>
         <h1 class="rgbDisplayer">RGB(255, 255, 255)</h1>
-        <h2>GUESSING GAME</h2>
+        <h2>DE ADIVINANZAS</h2>
         <div id="hearts"></div>
     </header>
 
@@ -23,10 +23,11 @@
         <ul>
             <li><a href="#" id="new-game"><span class="text-hide">REROLL</span><img src="icons/dice.svg" /></a></li>
             <li><span id="points">0</span></li>
-            <li><a href="#" class="difficulty active-link"><span class="text-hide">EASY</span><img src="icons/easy.svg"></a></li>
-            <li><a href="#" class="difficulty"><span class="text-hide">HARD</span><img src="icons/hard.svg"></a></li>
-            <li><a href="#" class="difficulty"><span class="text-hide">INSANE</span><img src="icons/insane.svg"></a></li>
-            <li><a href="#popup-trigger" class="helper"><span class="text-hide">HELP</span><img src="icons/question-circle-regular.svg"></a>
+            <li><a href="#" class="difficulty active-link"><span class="text-hide">FÁCIL</span><img src="icons/easy.svg"></a></li>
+            <li><a href="#" class="difficulty"><span class="text-hide">DIFÍCIL</span><img src="icons/hard.svg"></a></li>
+            <li><a href="#" class="difficulty"><span class="text-hide">DEMANTE</span><img src="icons/insane.svg"></a></li>
+            <li><a href="#popup-trigger" class="helper"><span class="text-hide">¿CÓMO SE JUEGA?</span><img
+                        src="icons/question-circle-regular.svg"></a>
             </li>
         </ul>
     </nav>
@@ -42,20 +43,25 @@
             <h2>How to play?</h2>
             <a class="close" href="#">&times;</a>
             <div class="content" style="font-size:medium">
-                <p>The main point of the game is to find out the right color that is specified in the <b>RGB()</b></p>
-                <p>RGB stands for <b>red, green, blue</b>. In computers they are used to create all kind of colors.</p>
-                <p>The numbers are used to represent the amount of that color. They go from <b>0(black)</b> to <b>255(white)</b>. So a color
-                    with <b>RGB(255,0,0)</b> is all
-                    red, no blue, no green. Which means <b>pure red</b>. (The colors are always in this order. RED, GREEN, BLUE)</p>
+                <p>El punto principal del juego es encontrar el color correcto que se especifica en el <b>RGB()</b></p>
+                <p>RGB significa <b>red, green, blue(rojo, verde, azul)</b>. En las computadoras se usan para crear todo tipo de colores.
+                    <p>Los números se usan para representar la cantidad de ese color. Van desde <b>0(negro)</b> hasta <b>255(blanco)</b>.
+                        Así que un color
+                        con <b>RGB(255,0,0)</b> es todo
+                        rojo, no azul, no verde. Lo que significa <b>rojo puro</b>. (Los colores siempre están en este orden. ROJO, VERDE,
+                        AZUL)</p>
 
-                <p>In this game you have to guess the color that is specified by the top title. You have limited number of tries so watch
-                    out.</p>
+                    <p>En este juego tienes que adivinar el color que se especifica en el título superior. Tienes un número limitado de
+                        intentos, así que ten cuidado.
+                    </p>
 
-                <p>The system point is like this: </p>
-                <p>- Everytime you guess wrong you will lose 1 point</p>
-                <p>- If you fail to find the color you lose 5 points</p>
-                <p>- Finding the color first try gives you 5 points</p>
-                <p>- Finding the color not in a first try gives you 4 points</p>
+                    <p>El punto del sistema es así: </p>
+                    <p>- Cada vez que adivines mal perderás 1 punto.</p>
+                    <p>- Si no encuentras el color, pierdes 5 puntos.</p>
+                    <p>- Encontrar el color en el primer intento te da 7 puntos.</p>
+                    <p>- Encontrar el color no en un primer intento te da 4 puntos.</p>
+
+                    <p>**Para restablecer la puntuación sólo tienes que recargar la página**</p>
             </div>
         </div>
     </div>

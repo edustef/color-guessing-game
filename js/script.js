@@ -2,8 +2,8 @@ const LINKS = document.querySelectorAll(".difficulty");
 let COLORS = [];
 let points = 0;
 let numOfColors = 4;
-let lifePoints = 3;
-let hearts = 3;
+let lifePoints = 2;
+let hearts = 2;
 let winnerColor;
 let winnerColorRGB;
 let colorFound = false;
@@ -35,17 +35,17 @@ LINKS.forEach((link, key) => {
 // Changes difficulty
 function changeDifficulty(link) {
   switch (link.firstChild.textContent) {
-    case "EASY":
+    case "FÁCIL":
       numOfColors = 4;
-      lifePoints = hearts = 3;
+      lifePoints = hearts = 2;
       difficulty = "EASY";
       break;
-    case "HARD":
+    case "DIFÍCIL":
       numOfColors = 8;
       lifePoints = hearts = 4;
       difficulty = "HARD";
       break;
-    case "INSANE":
+    case "DEMANTE":
       numOfColors = 12;
       lifePoints = hearts = 4;
       difficulty = "INSANE";
@@ -142,14 +142,16 @@ function clickColor() {
 
       if (
         this.style.backgroundColor.toUpperCase() == winnerColorRGB &&
+        hearts == lifePoints
+      ) {
+        points += 7;
+      } else if (
+        this.style.backgroundColor.toUpperCase() == winnerColorRGB &&
         hearts == 0
       ) {
-        points -= 4;
-      } else if(this.style.backgroundColor.toUpperCase() == winnerColorRGB && hearts == lifePoints) {
-        points += 7;
-      }
-      else {
         points += 4;
+      } else {
+        points -= 4;
       }
 
       document.querySelector("#new-game-click").style.display = "block";
