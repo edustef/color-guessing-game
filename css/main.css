@@ -1,0 +1,8 @@
+/* Defines default styles for the entire page */
+@import "root.css";
+
+/* The main look of the page */
+@import "page.css";
+
+/* The color boxese */
+@import "colors.css";

@@ -1,0 +1,94 @@
+.container {
+  max-width: 1300px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.color {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: red;
+  margin: 10px;
+  border-radius: 20px;
+  box-shadow: var(--main-shadow);
+}
+
+.color img {
+  padding: 10%;
+  width: 40%;
+  background-color: white;
+  border-radius: 50%;
+  box-shadow: var(--main-shadow);
+}
+
+.easy {
+  width: 250px;
+  height: 250px;
+}
+
+.hard {
+  width: 250px;
+  height: 250px;
+}
+
+.insane {
+  width: 190px;
+  height: 190px;
+}
+
+.hidden {
+  opacity: 0;
+  transition: opacity 1000ms;
+}
+
+.show {
+  opacity: 1;
+  transition: opacity 200ms;
+}
+
+@media screen and (max-width: 900px) {
+  .easy {
+    width: 200px;
+    height: 200px;
+  }
+
+  .hard {
+    width: 150px;
+    height: 150px;
+  }
+  .insane {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .hard {
+    width: 115px;
+    height: 115px;
+  }
+  .insane {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .easy {
+    width: 120px;
+    height: 120px;
+  }
+  .hard {
+    width: 100px;
+    height: 100px;
+  }
+  .insane {
+    width: 80px;
+    height: 80px;
+  }
+}
+
