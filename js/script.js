@@ -39,16 +39,19 @@ function changeDifficulty(link) {
       numOfColors = 4;
       lifePoints = hearts = 2;
       difficulty = "EASY";
+      newGame();
       break;
     case "DIFÍCIL":
       numOfColors = 8;
       lifePoints = hearts = 4;
       difficulty = "HARD";
+      newGame();
       break;
     case "DEMANTE":
       numOfColors = 12;
       lifePoints = hearts = 4;
       difficulty = "INSANE";
+      newGame();
       break;
   }
 }
